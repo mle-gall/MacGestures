@@ -5,8 +5,18 @@
 //  Created by LE GALL Maxence on 12/08/2025.
 //
 
-#import <Foundation/Foundation.h>
+#import <stdbool.h>
 
-@interface MacGestures : NSObject
+#if defined(__cplusplus)
+extern "C" {
+#endif
 
-@end
+__attribute__((visibility("default")))
+bool MacGestures_TryGetMagnifyDelta(float* outDelta);
+
+__attribute__((visibility("default")))
+bool MacGestures_TryGetPanDelta(float* outDeltaX, float* outDeltaY);
+
+#if defined(__cplusplus)
+}
+#endif
